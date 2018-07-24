@@ -1,22 +1,29 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Cookies msg="Welcome to Your Cookie Clicker"/>
+
+    <img class="cookie_img" src="./assets/cookie.png">
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Cookies from "./components/Cookies.vue";
 
 export default {
   name: "app",
   components: {
-    HelloWorld
+    Cookies
   }
 };
 </script>
 
 <style lang="scss">
+
+.cookie_img{
+  width: 200px;
+  max-width: 200px;
+}
+
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -26,3 +33,8 @@ export default {
   margin-top: 60px;
 }
 </style>
+
+
+
+
+
