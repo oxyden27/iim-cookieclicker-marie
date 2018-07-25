@@ -1,14 +1,30 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
+  <div class="Cookies">
+    <h1>{{ count }}</h1>
+
+
+    <img ref="cookie" class="cookie" @click="increment" src="../assets/cookie.png" alt="">
+
   </div>
 </template>
 
 <script>
+import { mapActions, mapGetters } from "vuex";
+
 export default {
   name: "Cookies",
-  props: {
-    msg: String
+  data () {
+      return{}
+  },
+  computed: {
+      ...mapGetters({
+       count: 'countData'
+    })
+  },
+  methods : {
+      increment () {
+          this.$store.dispatch("incrementCount", (this.count +1));
+      }
   }
 };
 </script>

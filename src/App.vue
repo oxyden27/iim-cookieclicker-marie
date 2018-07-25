@@ -1,18 +1,19 @@
 <template>
   <div id="app">
     <Cookies msg="Welcome to Your Cookie Clicker"/>
-
-    <img class="cookie_img" src="./assets/cookie.png">
+    <Shop></Shop>
   </div>
 </template>
 
 <script>
 import Cookies from "./components/Cookies.vue";
+import Shop from "./components/Shop.vue";
 
 export default {
   name: "app",
   components: {
-    Cookies
+    Cookies,
+    Shop
   }
 };
 </script>
