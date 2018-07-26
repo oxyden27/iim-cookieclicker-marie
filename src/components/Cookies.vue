@@ -19,7 +19,7 @@ export default {
     })
   },
   methods: {
-    // Fonction d'incrémentation de mon compteur
+    // Fonction incrémentation of my count
     increment() {
       this.$store.dispatch("incrementCount", this.count + 1);
     }

@@ -17,7 +17,7 @@ export default {
     Shop
   },
   computed: {
-    // Récupérer les produits de mon store
+    // Get products of my store
     products: function() {
       return this.$store ? this.$store.state.products.products : null;
     }

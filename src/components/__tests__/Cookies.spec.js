@@ -6,6 +6,7 @@ import store from "@/store";
 const localVue = createLocalVue();
 localVue.use(Vuex);
 
+// First test for incrementation of count
 describe("Cookies.vue", () => {
   const wrapper = shallowMount(Cookies, { store, localVue });
 

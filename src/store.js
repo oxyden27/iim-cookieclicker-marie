@@ -18,6 +18,7 @@ const store = new Vuex.Store({
         if (product.id === productId) {
           product.purchased++;
           state.count -= product.price;
+          // Attribution new price after buy
           if (product.name === "Cursor") {
             product.price = 1.22 * product.price;
             state.cursor = state.cursor + 1;

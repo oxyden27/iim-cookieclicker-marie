@@ -1,5 +1,6 @@
 import uuid from "uuid/v4";
 
+// List of products
 export default {
   products: [
     {

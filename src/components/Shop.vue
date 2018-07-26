@@ -22,6 +22,7 @@ export default {
   },
   props: ["product"],
   computed: {
+      // Fonction boolean if can buy or not
     canBuy: function() {
       return this.$store.state.count >= this.product.price;
     }
@@ -31,6 +32,7 @@ export default {
   },
   methods: {
     buy() {
+        // Fonction buy with condition if i can buy
       if (this.canBuy) {
         this.$store.commit("BUY_PRODUCTS", { productId: this.product.id });
       }
