@@ -62,7 +62,7 @@
     }
     .desc {
         flex: 1;
-
+        cursor: pointer;
         h4{
             margin-top: 10px;
             margin-bottom: 10px;

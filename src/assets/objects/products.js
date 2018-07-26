@@ -15,6 +15,13 @@ export default {
             price: 100,
             cookiePerSeconds: 5,
             purchased: 0
+        },
+        {
+            id: uuid(),
+            name: 'Farmer',
+            price: 1000,
+            cookiePerSeconds: 20,
+            purchased: 0
         }
     ]
 }

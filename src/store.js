@@ -18,12 +18,17 @@ const store =  new Vuex.Store({
             if (product.id === productId) {
                 product.purchased++
                 state.count -= product.price
-                product.price = 1.22 * product.price
                 if(product.name === "Cursor"){
+                    product.price = 1.22 * product.price
                     state.cursor = state.cursor +1
                 }
-                else{
+                if(product.name === "Grandma"){
+                    product.price = 1.62 * product.price
                     state.grandma = state.grandma + 1
+                }
+                if(product.name === "Farmer"){
+                    product.price = 2 * product.price
+                    state.farmer = state.farmer + 1
                 }
             }
 
