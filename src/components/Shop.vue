@@ -15,80 +15,75 @@
 </template>
 
 <script>
-    import { mapActions, mapGetters } from "vuex";
-
-    export default {
-        name: "Shop",
-        data () {
-            return{}
-        },
-        props: ['product'],
-        computed: {
-            canBuy: function () {
-                return this.$store.state.count >= this.product.price
-            },
-        },
-        mounted() {
-            this.$store.dispatch("farmProducts", (this.product.name));
-        },
-        methods : {
-            buy () {
-                if (this.canBuy) {
-                    this.$store.commit('BUY_PRODUCTS', { productId: this.product.id})
-                }
-            }
-        }
-    };
+export default {
+  name: "Shop",
+  data() {
+    return {};
+  },
+  props: ["product"],
+  computed: {
+    canBuy: function() {
+      return this.$store.state.count >= this.product.price;
+    }
+  },
+  mounted() {
+    this.$store.dispatch("farmProducts", this.product.name);
+  },
+  methods: {
+    buy() {
+      if (this.canBuy) {
+        this.$store.commit("BUY_PRODUCTS", { productId: this.product.id });
+      }
+    }
+  }
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.product {
+  border: 1px solid black;
+  margin-top: 10px;
+  margin-left: 10px;
+  border-radius: 20px;
+  width: 47% !important;
+  display: inline-flex;
+  padding: 10px;
+}
 
-    .product {
-        border: 1Px solid black;
-        margin-top: 10px;
-        margin-left: 10px;
-        border-radius: 20px;
-        width: 47%!important;
-        display: inline-flex;
-        padding: 10px;
-    }
-
-    .price {
-        padding-top: 10px;
-        display: flex;
-        align-items: center;
-        font-family: 'Quicksand', sans-serif;
-    }
-    .desc {
-        flex: 1;
-        cursor: pointer;
-        h4{
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-    }
-    .count {
-        font-size: 30px;
-        color: #777;
-    }
-    .icon {
-        width: 35px;
-        height: 35px;
-        margin-right: 5px;
-    }
-    .text-green {
-        color: green;
-        font-weight: bold;
-    }
-    .text-red {
-        color: red;
-    }
-    small {
-        color: #777;
-        font-weight: normal;
-        font-size: 15px;
-    }
-
-
+.price {
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  font-family: "Quicksand", sans-serif;
+}
+.desc {
+  flex: 1;
+  cursor: pointer;
+  h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+.count {
+  font-size: 30px;
+  color: #777;
+}
+.icon {
+  width: 35px;
+  height: 35px;
+  margin-right: 5px;
+}
+.text-green {
+  color: green;
+  font-weight: bold;
+}
+.text-red {
+  color: red;
+}
+small {
+  color: #777;
+  font-weight: normal;
+  font-size: 15px;
+}
 </style>

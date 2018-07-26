@@ -1,64 +1,63 @@
 <template>
   <div class="Cookies">
     <h1>{{ count }} cookies</h1>
-
-
     <img ref="cookie" class="cookie" @click="increment" src="../assets/cookie.png" alt="">
-
   </div>
 </template>
 
 <script>
-import { mapActions, mapGetters } from "vuex";
+import { mapGetters } from "vuex";
 
 export default {
   name: "Cookies",
-  data () {
-      return{}
+  data() {
+    return {};
   },
   computed: {
-      ...mapGetters({
-       count: 'countData'
+    ...mapGetters({
+      count: "countData"
     })
   },
-  methods : {
-      increment () {
-          this.$store.dispatch("incrementCount", (this.count +1));
-      }
+  methods: {
+    // Fonction d'incrémentation de mon compteur
+    increment() {
+      this.$store.dispatch("incrementCount", this.count + 1);
+    }
   }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-
-.Cookies{
+.Cookies {
   text-align: center;
   margin-top: 20px;
 
-  h1{
+  h1 {
     color: #788f7d;
     line-height: inherit;
     margin-top: 0px;
   }
 }
 
-.cookie{
+.cookie {
   max-width: 200px;
-
 }
 
 h3 {
   margin: 40px 0 0;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 li {
   display: inline-block;
   margin: 0 10px;
 }
+
 a {
   color: #42b983;
 }

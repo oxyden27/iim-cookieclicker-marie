@@ -1,7 +1,7 @@
-export default function (el, animationCSS, duration = 100) {
-    el.classList.add(animationCSS)
+export default function(el, animationCSS, duration = 100) {
+  el.classList.add(animationCSS);
 
-    setTimeout(() => {
-        el.classList.remove(animationCSS)
-    }, duration)
+  setTimeout(() => {
+    el.classList.remove(animationCSS);
+  }, duration);
 }
