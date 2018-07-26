@@ -14,9 +14,12 @@ const store = new Vuex.Store({
       state.count = newTotal;
     },
     BUY_PRODUCTS: (state, { productId }) => {
+      //Loop to know which product product is concerned
       state.products.products = state.products.products.map(product => {
         if (product.id === productId) {
+          // Get one
           product.purchased++;
+          //Subtract the number of cookies purchased from the total number of cookies
           state.count -= product.price;
           // Attribution new price after buy
           if (product.name === "Cursor") {
@@ -42,6 +45,7 @@ const store = new Vuex.Store({
     },
 
     ADD_COOKIES: (state, { cookies }) => {
+      // add cookies from the total number of cookies
       state.count = state.count + cookies;
     },
 
