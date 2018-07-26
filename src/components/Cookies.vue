@@ -1,6 +1,6 @@
 <template>
   <div class="Cookies">
-    <h1>{{ count }}</h1>
+    <h1>{{ count }} cookies</h1>
 
 
     <img ref="cookie" class="cookie" @click="increment" src="../assets/cookie.png" alt="">
@@ -31,6 +31,23 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+
+.Cookies{
+  text-align: center;
+  margin-top: 20px;
+
+  h1{
+    color: #788f7d;
+    line-height: inherit;
+    margin-top: 0px;
+  }
+}
+
+.cookie{
+  max-width: 200px;
+
+}
+
 h3 {
   margin: 40px 0 0;
 }
